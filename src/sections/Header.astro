@@ -2,13 +2,13 @@
 import LitNav from "../components/LitNav.astro";
 ---
 
-<header>
+<header class="sticky top-0 bg-white z-10">
     <section class="text-center py-3">
         <span class="text-razzmatazz text-3xl font-semibold">Luxe</span>
     </section>
 </header>
 
-<nav class="fixed bottom-0 w-full flex items-center bg-white [box-shadow:0px_-5px_10px_#00000009]">
+<nav class="fixed bottom-0 z-10 w-full flex items-center bg-white [box-shadow:0px_-5px_10px_#00000009]">
     <ul class="w-11/12 mx-auto grid grid-cols-4 items-center justify-center">
         <!-- home -->
         <LitNav>
@@ -45,3 +45,20 @@ import LitNav from "../components/LitNav.astro";
     const $links = document.querySelectorAll("a");
     $links[0].classList.add("active");
 </script>
+
+<style>
+    header{
+        animation: desplazamiento both ;
+        animation-timeline: scroll(root);
+        animation-range: 0 300px;
+    }
+
+    @keyframes desplazamiento {
+        100%{
+            box-shadow: 0px 10px 10px #00000020;
+            border-radius: 0px 0px 10px 10px;
+            background-color: #ffffff90;
+            backdrop-filter: blur(40px);
+        }
+    }
+</style>

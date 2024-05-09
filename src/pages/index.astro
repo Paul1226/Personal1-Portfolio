@@ -1,10 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../sections/Header.astro';
+import HeroContent from '../sections/HeroContent.astro';
+import Decorative from '../sections/Decorative.astro';
+import FooterHero from '../sections/FooterHero.astro';
+import LitNav from '../components/LitNav.astro';
 ---
 
 <Layout title="Personal | Portfolio">
 	<Header/>
-	<main>
+	<main class="w-11/12 mx-auto py-4">
+		<div class="grid grid-cols-1 gap-y-5 pb-20">
+			<HeroContent/>
+			<Decorative/>
+			<FooterHero/>
+		</div>
 	</main>
 </Layout>

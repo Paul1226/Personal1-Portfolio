@@ -1,0 +1,46 @@
+---
+interface Props {
+    title: string;
+    text: string;
+    id: string;
+}
+const {title, text, id} = Astro.props
+---
+<div class="p-3 flex justify-center items-center gap-3 bg-white/80 backdrop-blur-md rounded-xl absolute right-0 [box-shadow:-10px_10px_10px_#00000050]" id={id}>
+    <span class="bg-razzmatazz rounded-xl">
+        <svg 
+            class="w-8 fill-white p-2 box-content"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            fill="none"
+        >
+            <slot/>
+        </svg>
+    </span>
+    <div class="">
+        <p class="font-semibold text-xl text-balance">{title}</p>
+        <span class="text-mountain">{text}</span>
+    </div>
+</div>
+
+<style>
+    #notf1{
+        top: 0;
+    }
+    #notf2{
+        top: 50%;
+        /* translate: 0 -50%; */
+    }
+    #notf3{
+        bottom: 0;
+        box-shadow: -10px 10px 10px #00000030;
+        &>span{
+            background-color: transparent;
+
+            svg{
+                fill: #F2C94C;
+            }
+        }
+
+    }
+</style>

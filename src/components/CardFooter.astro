@@ -1,0 +1,21 @@
+---
+interface Props {
+    titleCard: string;
+    textCard: string;    
+}
+
+const { titleCard, textCard } = Astro.props
+---
+
+<article>
+    <svg
+        class="w-10 fill-razzmatazz"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 64 64"
+        fill="none"
+    >
+    <slot/>
+    </svg>
+    <h3 class="font-semibold text-base">{titleCard}</h3>
+    <p>{textCard}</p>
+</article>
