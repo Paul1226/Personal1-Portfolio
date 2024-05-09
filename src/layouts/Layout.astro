@@ -23,7 +23,7 @@ import '@fontsource/poppins/800.css';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="font-poppins text-sm relative h-screen bg-gray-50">
 		<slot />
 	</body>
 </html>
@@ -32,5 +32,9 @@ import '@fontsource/poppins/800.css';
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
+	}
+
+	h1{
+		@apply font-bebas text-balance text-texto;
 	}
 </style>
